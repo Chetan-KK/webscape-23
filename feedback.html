@@ -42,16 +42,14 @@
         <a href="/feedback.html" class="link active"> Feedback </a>
       </div>
     </div>
-    <form class="form flex" onsubmit="submit(e)">
+    <form class="form flex" onsubmit="submit()">
       <div class="title">Tell us what you liked about Chandrayaan-3</div>
       <input
-        type="text"
+        type="email"
         class="input-field"
         placeholder="Enter your email ID"
-        required
       />
       <textarea
-        required
         class="textarea-field"
         name="message"
         id=""
@@ -59,7 +57,7 @@
         rows="10"
         placeholder="say hi to Chandrayaan 3"
       ></textarea>
-      <input type="submit" id="sub-but" class="input-field inp-but" />
+      <input type="submit" class="input-field inp-but" />
     </form>
     <div class="footer flex">
       <div class="copy">
@@ -74,8 +72,10 @@
     </div>
   </body>
   <script>
+    function submit(e) {
+      e.preventDefault();
+    }
     logMovies();
-
     async function logMovies() {
       // const response = await fetch(
       //   "https://sparkling-knickers-ant.cyclic.app/"
@@ -92,8 +92,6 @@
       );
       // const movies = await response.json();
       console.log(response);
-      document.getElementById("sub-but").innerHTML = "submitted";
-      console.log(document.getElementById("sub-but"));
     }
   </script>
   <script src="toggle.js"></script>

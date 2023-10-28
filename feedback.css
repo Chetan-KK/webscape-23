@@ -10,6 +10,7 @@
 }
 .textarea-field,
 .input-field {
+  color: var(--fc);
   background-color: rgba(0, 0, 0, 0.146);
   backdrop-filter: blur(10px);
   border: none;
