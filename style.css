@@ -1,0 +1,112 @@
+.hero {
+  min-height: 70vh;
+  padding-top: 7rem;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.hero .yan-img {
+  position: absolute;
+  top: 15rem;
+  right: 5rem;
+  width: 15rem;
+  animation: float 7s infinite linear;
+}
+
+.hero .main-title {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: var(--fc);
+  font-family: var(--ff-h);
+  font-weight: 800;
+}
+.hero .sub-heading {
+  font-family: var(--ff);
+  color: var(--fc);
+  width: 50vw;
+}
+.hero .moon-wrapper {
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  height: 40rem;
+}
+.moon-wrapper a {
+  display: block;
+}
+.hero .moonImg {
+  margin-top: 5rem;
+  width: 80vw;
+  transition: var(--transition);
+}
+.exp-but {
+  position: absolute;
+  top: 10rem;
+  padding: 1rem 8rem;
+  background-image: linear-gradient(
+    30deg,
+    var(--primary-color),
+    var(--sec-color)
+  );
+  /* background-color: var(--primary-color); */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 30px -8px var(--primary-color);
+  font-weight: bolder;
+  color: var(--fc);
+  font-size: 1.5rem;
+  font-family: var(--ff-h);
+  z-index: 99;
+  transition: var(--transition);
+}
+
+.exp-but:hover {
+  padding: 1rem 9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: line;
+}
+.exp-but:hover ~ .moonImg {
+  transform: translateY(-10px) scale(1.1);
+  -webkit-filter: drop-shadow(5px 5px 30px blue);
+  filter: drop-shadow(5px 5px 30px rgb(74, 74, 255));
+}
+@media screen and (max-width: 850px) {
+  .hero .yan-img {
+    top: 20rem;
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 710px) {
+  .hero .main-title {
+    font-size: 4rem;
+  }
+  .hero .sub-heading {
+    width: 80vw;
+  }
+
+  .exp-but {
+    padding: 1rem 5rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .hero .main-title {
+    font-size: 10vw;
+    margin-bottom: 3rem;
+  }
+  .hero .yan-img {
+    top: 24rem;
+    z-index: 9;
+    right: 2rem;
+    width: 7rem;
+  }
+
+  .exp-but {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+  }
+  .exp-but:hover {
+    padding: 1rem 4rem;
+  }
+}

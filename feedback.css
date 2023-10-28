@@ -1,0 +1,55 @@
+.form {
+  padding: 3rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form .title {
+  color: var(--fc);
+  font-family: var(--ff-h);
+  font-size: calc(1.5rem + 1vw);
+}
+.textarea-field,
+.input-field {
+  background-color: rgba(0, 0, 0, 0.146);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-bottom: 1px solid var(--sec-color);
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-family: var(--ff);
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+.textarea-field:hover,
+.input-field:hover {
+  box-shadow: 0 0 30px -10px var(--sec-color);
+}
+.inp-but {
+  width: max-content;
+  padding: 0.5rem 3rem;
+  box-shadow: 0 0 30px -10px var(--sec-color);
+  background-color: var(--secondary-color);
+  color: var(--fc);
+  font-weight: 700;
+  font-family: var(--ff-h);
+}
+.inp-but:hover {
+  padding: 0.5rem 3.5rem;
+  background-color: var(--sec-color);
+  color: black;
+}
+@media screen and (max-width: 500px) {
+  .form {
+    padding: 3rem 1rem;
+    gap: 1.5rem;
+  }
+  .textarea-field,
+  .input-field {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  .form .title {
+    text-align: center;
+    font-size: 5vw;
+  }
+}

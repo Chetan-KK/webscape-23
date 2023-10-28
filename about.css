@@ -1,0 +1,55 @@
+.about .title {
+  font-family: var(--ff-h);
+  padding: 1rem 0;
+  font-size: 3rem;
+  color: var(--fc);
+  text-align: center;
+}
+.about .title i {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.about {
+  padding: 2rem 0;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about p {
+  color: var(--fc);
+  font-family: var(--ff);
+  width: 50vw;
+  padding: 1rem;
+  text-align: justify;
+  line-height: 2rem;
+}
+.about .info {
+  gap: 1rem;
+}
+.about .rocketpng {
+  width: 20rem;
+}
+@media screen and (max-width: 700px) {
+  .about .info {
+    flex-direction: column;
+  }
+  .about p {
+    width: auto;
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .about .title {
+    padding: 1rem 2rem;
+    font-size: 10vw;
+  }
+  .about .title i {
+    display: none;
+  }
+  .about p {
+    width: auto;
+    padding: 1rem;
+  }
+  .about .rocketpng {
+    width: 90vw;
+  }
+}
