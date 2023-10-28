@@ -70,6 +70,7 @@ a {
 .abhi-quizz-options-sub-1 .opt-2 {
   font-size: 1.5rem;
   padding: 0.5rem 1.5rem;
+  white-space: nowrap;
   border: solid 2px var(--fc);
   border-radius: 2rem;
   width: 100%;
@@ -83,6 +84,7 @@ a {
 .abhi-quizz-options-sub-2 .opt-3,
 .abhi-quizz-options-sub-2 .opt-4 {
   font-size: 1.5rem;
+  white-space: nowrap;
   padding: 0.5rem 1.5rem;
   border: solid 2px var(--fc);
   border-radius: 2rem;
@@ -112,4 +114,9 @@ a {
   background-color: var(--fc);
   color: black;
   transition: 100ms;
+}
+@media screen and (max-width: 900px) {
+  .abhi-quizz {
+    flex-direction: column;
+  }
 }

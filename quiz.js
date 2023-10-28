@@ -98,15 +98,15 @@ function selectAnswer(event, element) {
     // console.log("prev: ", previousSelectedElement);
 }
 function checkAns(event) {
-    console.log();
     if (previousSelectedElement === null) {
         alert("Please select an answer!!");
     } else {
-        // console.log("gvalue", document.getElementById(id).value);
-        // console.log("2value", questions[i].Qs.ans);
-        // if (document.getElementById(id).value == questions[i].Qs.ans) {
-        alert("Right answer");
-        // } else {
-        // alert("Your answer is wrong!!");
+        console.log("gvalue", document.getElementById(id).value);
+        console.log("2value", questions[i].Qs.ans);
+        if (document.getElementById(id).value == questions[i].Qs.ans) {
+            alert("Right answer");
+        } else {
+            alert("Your answer is wrong!!");
+        }
     }
 }

@@ -34,7 +34,7 @@ a {
 }
 body {
   margin: auto;
-  max-width: 1680px;
+  /* max-width: 1680px; */
   background-image: linear-gradient(
       30deg,
       rgba(5, 5, 40, 0.337),

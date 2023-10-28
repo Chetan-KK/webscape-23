@@ -1,5 +1,5 @@
 .hero {
-  min-height: 70vh;
+  min-height: 100vh;
   padding-top: 7rem;
   justify-content: center;
   flex-direction: column;
@@ -36,7 +36,7 @@
 }
 .hero .moonImg {
   margin-top: 5rem;
-  width: 80vw;
+  max-width: 80vw;
   transition: var(--transition);
 }
 .exp-but {

@@ -24,7 +24,7 @@
   </head>
   <body>
     <div class="header">
-      <a href="/webscape-23/index.html">
+      <a href="/index.html">
         <img src="/imgs/logo.png" class="logo" alt="" />
       </a>
       <div class="toggle open-icon" id="toggle_open">
@@ -34,31 +34,24 @@
         <div class="toggle close-icon" id="toggle_close">
           <i class="fa-solid fa-x"></i>
         </div>
-        <a href="/webscape-23/index.html" class="link active"> Home </a>
-        <a href="/webscape-23/about.html" class="link"> About </a>
+        <a href="/index.html" class="link"> Home </a>
+        <a href="/about.html" class="link"> About </a>
 
-        <a href="/webscape-23/quiz.html" class="link"> Take a quiz! </a>
-        <a href="/webscape-23/gallery.html" class="link"> Gallery </a>
-        <a href="/webscape-23/feedback.html" class="link"> Feedback </a>
+        <a href="/quiz.html" class="link"> Take a quiz! </a>
+        <a href="/gallery.html" class="link"> Gallery </a>
+        <a href="/feedback.html" class="link active"> Feedback </a>
       </div>
     </div>
-    <form
-      class="form flex"
-      action="https://formsubmit.co/chetankhulage350@gmail.com"
-      method="post"
-    >
-      <input
-        type="hidden"
-        name="_next"
-        value="https://yourdomain.co/thanks.html"
-      />
+    <form class="form flex" onsubmit="submit(e)">
       <div class="title">Tell us what you liked about Chandrayaan-3</div>
       <input
         type="text"
         class="input-field"
         placeholder="Enter your email ID"
+        required
       />
       <textarea
+        required
         class="textarea-field"
         name="message"
         id=""
@@ -66,7 +59,7 @@
         rows="10"
         placeholder="say hi to Chandrayaan 3"
       ></textarea>
-      <input type="submit" class="input-field inp-but" />
+      <input type="submit" id="sub-but" class="input-field inp-but" />
     </form>
     <div class="footer flex">
       <div class="copy">
@@ -80,5 +73,28 @@
       </div>
     </div>
   </body>
+  <script>
+    logMovies();
+
+    async function logMovies() {
+      // const response = await fetch(
+      //   "https://sparkling-knickers-ant.cyclic.app/"
+      // );
+      const response = await fetch(
+        "https://sparkling-knickers-ant.cyclic.app/",
+        {
+          method: "get",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      // const movies = await response.json();
+      console.log(response);
+      document.getElementById("sub-but").innerHTML = "submitted";
+      console.log(document.getElementById("sub-but"));
+    }
+  </script>
   <script src="toggle.js"></script>
 </html>
